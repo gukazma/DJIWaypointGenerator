@@ -14,6 +14,8 @@ class ModuleConan(ConanFile):
 
     def requirements(self):
         self.requires("gtest/1.14.0")
+        self.requires("boost/1.83.0")
+        self.requires("libkml/1.3.0")
         
     def imports(self):
         self.copy("*.dll", "./bin", "bin")

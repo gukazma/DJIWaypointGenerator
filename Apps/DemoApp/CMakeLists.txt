@@ -1,4 +1,4 @@
-set(TARGET_NAME DemoApp)
+set(TARGET_NAME WaypointsGenerator)
 
 find_package(Qt5 COMPONENTS Core Widgets Gui OpenGL REQUIRED)
 
@@ -24,6 +24,7 @@ Qt5::Core
 Qt5::Gui
 Qt5::Widgets
 Qt5::OpenGL
+DJIWaypointsGenerator
 )
 
 if(MSVC)
