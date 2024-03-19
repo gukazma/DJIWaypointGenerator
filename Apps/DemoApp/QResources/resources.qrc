@@ -1,6 +1,6 @@
 <RCC>
   <qresource prefix="/">
     <file>Translations/zh_CN.qm</file>
-    <file>mgukazma.jpg</file>
+    <file>splashScreen.png</file>
   </qresource>
 </RCC>
