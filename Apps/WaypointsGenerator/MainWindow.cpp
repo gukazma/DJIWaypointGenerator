@@ -5,6 +5,7 @@
 #include <iostream>
 #include <QFileDialog>
 #include <boost/filesystem.hpp>
+#include <wg/Context.h>
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -29,6 +30,10 @@ MainWindow::MainWindow(QWidget *parent) :
         if (!outputFile.isEmpty()) {
             ui->lineEdit_ouput->setText(outputFile);
         }
+    });
+    connect(ui->pushButton_start, &QPushButton::clicked, [=]() {
+        wg::GenerateDJIWaypoints(ui->lineEdit_input->text().toLocal8Bit().toStdString(),
+                                 ui->lineEdit_ouput->text().toLocal8Bit().toStdString());
     });
 }
 
