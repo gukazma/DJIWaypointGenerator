@@ -35,10 +35,11 @@ add_custom_command(TARGET ${TARGET_NAME} POST_BUILD
   COMMENT "Deploying qt dependencies after build..."
   WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
 )
-
+if(NOT ENABLE_DEBUG)
 set_target_properties(${TARGET_NAME} PROPERTIES
-LINK_FLAGS_RELEASE "/SUBSYSTEM:WINDOWS /ENTRY:mainCRTStartup"
-)
+      LINK_FLAGS_RELEASE "/SUBSYSTEM:WINDOWS /ENTRY:mainCRTStartup")
+endif()
+
 endif()
 
 
