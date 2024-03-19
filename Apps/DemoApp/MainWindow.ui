@@ -32,7 +32,7 @@
          </size>
         </property>
         <property name="text">
-         <string>航点角点文件：</string>
+         <string>航点文件输入路径：</string>
         </property>
        </widget>
       </item>
@@ -65,7 +65,7 @@
          </size>
         </property>
         <property name="text">
-         <string>输出路径：</string>
+         <string>航点输出文件路径：</string>
         </property>
        </widget>
       </item>
